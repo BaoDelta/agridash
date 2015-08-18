@@ -1,2 +1,2 @@
-# agridash
+# AgriDash
 WIP

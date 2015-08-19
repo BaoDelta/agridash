@@ -11,6 +11,7 @@
     "arrow-parens": 0,
     "no-invalid-this": 0,
     "react/wrap-multilines": 0,
-    "react/sort-comp": 1
+    "react/sort-comp": 1,
+    "filenames/filenames": 0
   }
 }

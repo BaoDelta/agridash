@@ -14,19 +14,26 @@
   },
   "homepage": "https://github.com/baodang/agridash#readme",
   "scripts": {
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "start-server": "node index.js",
+    "watch-client": "webpack --config webpack/config.dev.js --watch",
+    "start-dev": "concurrent --kill-others \"npm run start-server\" \"npm run watch-client\""
   },
   "dependencies": {
     "hapi": "^9.0.2",
-    "inert": "^3.0.1"
+    "inert": "^3.0.1",
+    "lodash": "^3.10.1"
   },
   "devDependencies": {
     "babel": "^5.8.21",
     "babel-core": "^5.8.22",
     "babel-eslint": "^4.0.10",
+    "babel-loader": "^5.3.2",
+    "concurrently": "^0.1.1",
     "eslint": "^1.2.0",
     "eslint-config-defaults": "^4.1.0",
     "eslint-plugin-filenames": "^0.1.2",
-    "eslint-plugin-react": "^3.2.3"
+    "eslint-plugin-react": "^3.2.3",
+    "webpack": "^1.11.0"
   }
 }

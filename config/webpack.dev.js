@@ -1,6 +1,7 @@
 var path = require("path");
 
 module.exports = {
+  devtool: "cheap-source-map",
   entry: {
     app: [path.resolve("src/node_modules/app/_client/index.js")]
   },

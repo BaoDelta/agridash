@@ -1,14 +1,19 @@
 var path = require("path");
 var webpack = require("webpack");
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var SplitByPathPlugin = require("webpack-split-by-path");
+var serverConfig = require("./server.dev");
 
 module.exports = {
-  devtool: "cheap-source-map",
+  devtool: "cheap-module-eval-source-map",
   entry: {
-    app: [path.resolve("src/node_modules/app/_client/index.js")]
+    app: [
+      path.resolve("src/node_modules/app/_client/index.js"),
+      "webpack-dev-server/client?http://" + serverConfig.connection.host + ":" + serverConfig.devPort,
+      "webpack/hot/only-dev-server"
+    ]
   },
   output: {
-    path: "./public/build",
+    path:  path.resolve("public/build"),
     publicPath: "/public/build/",
     filename: "[name].js",
     chunkFilename: "[name].js"
@@ -17,19 +22,25 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: "babel",
+        loader: "react-hot!babel",
         include: path.resolve("src")
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style", "css?modules&localIdentName=[name]-[local]--[hash:base64:7]"),
+        loader: "style!css?modules&localIdentName=[name]-[local]--[hash:base64:7]",
         include: path.resolve("src")
       }
     ]
   },
   plugins: [
+    new SplitByPathPlugin([
+      {
+        name: "vendors",
+        path: path.resolve("node_modules")
+      }
+    ]),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin("[name].css")
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ]
 };

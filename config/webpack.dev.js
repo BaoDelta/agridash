@@ -39,7 +39,6 @@ module.exports = {
         path: path.resolve("node_modules")
       }
     ]),
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ]

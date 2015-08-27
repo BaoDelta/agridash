@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/baodang/agridash#readme",
   "scripts": {
-    "lint": "eslint src",
+    "lint": "gulp lint",
     "dev": "gulp dev"
   },
   "dependencies": {
@@ -36,13 +36,17 @@
     "babel-eslint": "^4.0.10",
     "babel-loader": "^5.3.2",
     "css-loader": "^0.16.0",
-    "eslint": "^1.2.0",
     "eslint-config-defaults": "^4.1.0",
     "eslint-plugin-filenames": "^0.1.2",
     "eslint-plugin-react": "^3.2.3",
     "extract-text-webpack-plugin": "^0.8.2",
     "gulp": "^3.9.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-count": "^0.1.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-foreach": "^0.1.0",
     "gulp-nodemon": "^2.0.4",
+    "gulp-plumber": "^1.0.1",
     "gulp-util": "^3.0.6",
     "react-hot-loader": "^2.0.0-alpha",
     "style-loader": "^0.12.3",

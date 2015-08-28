@@ -13,17 +13,28 @@ var WebpackDevServer = require("webpack-dev-server");
 var serverConfig = require(path.resolve("config/server.dev"))
 var webpackConfig = require(path.resolve("config/webpack.dev"))
 
-var handleError = function() {
+function handleError() {
   return plumber(function(err) {
     gutil.beep();
     gutil.log(err.toString());
     this.emit("end");
   });
-};
+}
 
-gulp.task("dev", ["watch", "server", "dev-server"]);
+function schedule(func, time) {
+  var lastTime;
+  return function(done) {
+    var now = Date.now();
+    if (!lastTime || now - lastTime >= time) {
+      lastTime = now;
+      return func();
+    }
+    gutil.log("Skip this time");
+    return done();
+  };
+}
 
-gulp.task("lint", function() {
+var lint = schedule(function() {
   var cacheName = "lint";
   return gulp.src(["src/**/*.js"])
     .pipe(handleError())
@@ -38,6 +49,12 @@ gulp.task("lint", function() {
     }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
+}, 60000);
+
+gulp.task("dev", ["watch", "server", "dev-server"]);
+
+gulp.task("lint", function(done) {
+  return lint(done);
 });
 
 gulp.task("watch", ["lint"], function() {

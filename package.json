@@ -53,6 +53,6 @@
     "style-loader": "^0.12.3",
     "webpack": "^1.11.0",
     "webpack-dev-server": "^1.10.1",
-    "webpack-split-by-path": "BohdanTkachenko/webpack-split-by-path"
+    "webpack-split-by-path": "0.0.3"
   }
 }

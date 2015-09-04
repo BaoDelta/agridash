@@ -11,8 +11,9 @@ password = REDIS_PASSWORD
 host = "0.0.0.0"
 port = 7000
 
-[devServer]
-port = 7400
+[webpack]
+port       = 7400
+publicPath = "/public/dist/"
 
 [tile]
 port   = 7800

@@ -10,7 +10,7 @@ let app = [path.resolve("src/node_modules/app/_client/index.js")]
 if (config.webpack.port) {
   app = [
     ...app,
-    "webpack-dev-server/client?http://" + config.server.host + ":" + config.webpack.port,
+    "webpack-dev-server/client?http://" + config.webpack.host + ":" + config.webpack.port,
     "webpack/hot/only-dev-server"
   ]
 }

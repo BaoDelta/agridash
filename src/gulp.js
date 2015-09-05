@@ -16,9 +16,9 @@ const config = toml.parse(fs.readFileSync(path.resolve("conf/dev.toml"), "utf8")
 const webpackConfig = require(path.resolve("src/webpack"))
 
 function handleError() {
-  return plumber(err => {
+  return plumber(function(error) {
     gutil.beep()
-    gutil.log(err.toString())
+    gutil.log(error.toString())
     this.emit("end")
   })
 }

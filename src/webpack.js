@@ -4,7 +4,7 @@ import SplitByPathPlugin from "webpack-split-by-path"
 
 const config = require(path.resolve("src/config"))
 
-let app = [path.resolve("src/node_modules/client.js")]
+let app = [path.resolve("src/node_modules/app/client.js")]
 if (config.webpack.port) {
   app = [
     ...app,

@@ -1,12 +1,10 @@
-config/server.dev.js
-
 conf/*
 !conf/sample.toml
 
 node_modules/*
 !node_modules/app
 
-public/dist
+src/node_modules/app/web/public/dist
 
 logs
 *.log

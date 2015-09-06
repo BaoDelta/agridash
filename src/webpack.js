@@ -1,8 +1,7 @@
 import path from "path"
 import webpack from "webpack"
 import SplitByPathPlugin from "webpack-split-by-path"
-
-const config = require(path.resolve("src/node_modules/app/config"))
+import config from "./node_modules/app/config"
 
 let app = [path.resolve("src/node_modules/app/client.js")]
 if (config.webpack.port) {

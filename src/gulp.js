@@ -1,4 +1,3 @@
-import path from "path"
 import gulp from "gulp"
 import plumber from "gulp-plumber"
 import cache from "gulp-cached"
@@ -10,9 +9,8 @@ import webpack from "webpack"
 import WebpackDevServer from "webpack-dev-server"
 import {createLogger} from "bunyan"
 import beep from "beepbeep"
-
-const config = require(path.resolve("src/node_modules/app/config"))
-const webpackConfig = require(path.resolve("src/webpack"))
+import config from "./node_modules/app/config"
+import webpackConfig from "./webpack"
 
 const log = createLogger({name: "gulp"})
 

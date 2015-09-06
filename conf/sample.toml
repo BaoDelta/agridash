@@ -8,16 +8,39 @@ password = DB_PASSWORD
 host     = "localhost"
 password = REDIS_PASSWORD
 
-[server]
-host = "0.0.0.0"
-port = 7000
+[web]
+host  = "localhost"
+port  = 7000
 
-[webpack]
-host       = "0.0.0.0"
-port       = 7400
-publicPath = "/public/dist/"
+[api]
+host  = "localhost"
+port  = 7100
+url   = "/api"
 
 [tile]
-host   = "0.0.0.0"
-port   = 7800
+host   = "localhost"
+port   = 7200
+url    = "/tile"
 extent = "-19942765.3260505,-1637243.58853688,20012847.7359938,11528300.5677573"
+
+[webpack]
+host       = "localhost"
+port       = 7999
+publicPath = "/public/dist/"
+
+[debug]
+showRoutes = true
+
+[vendors]
+styles  = [
+  "twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css",
+  "font-awesome/4.4.0/css/font-awesome.min.css",
+  "leaflet/1.0.0-beta.1/leaflet.css"
+]
+scripts = [
+  "jquery/3.0.0-alpha1/jquery.min.js",
+  "twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js",
+  "leaflet/1.0.0-beta.1/leaflet.js",
+  "highcharts/4.1.8/highcharts.js",
+  "highcharts/4.1.8/modules/exporting.js"
+]

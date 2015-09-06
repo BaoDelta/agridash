@@ -1,12 +1,10 @@
 import path from "path"
-import fs from "fs"
-import toml from "toml"
 import webpack from "webpack"
 import SplitByPathPlugin from "webpack-split-by-path"
 
-const config = toml.parse(fs.readFileSync(path.resolve("conf/dev.toml"), "utf8"))
+const config = require(path.resolve("src/config"))
 
-let app = [path.resolve("src/node_modules/app/_client/index.js")]
+let app = [path.resolve("src/node_modules/client.js")]
 if (config.webpack.port) {
   app = [
     ...app,

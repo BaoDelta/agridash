@@ -1,6 +1,4 @@
 import path from "path"
-import fs from "fs"
-import toml from "toml"
 import gulp from "gulp"
 import gutil from "gulp-util"
 import plumber from "gulp-plumber"
@@ -12,7 +10,7 @@ import nodemon from "gulp-nodemon"
 import webpack from "webpack"
 import WebpackDevServer from "webpack-dev-server"
 
-const config = toml.parse(fs.readFileSync(path.resolve("conf/dev.toml"), "utf8"))
+const config = require(path.resolve("src/config"))
 const webpackConfig = require(path.resolve("src/webpack"))
 
 function handleError() {
@@ -50,8 +48,10 @@ gulp.task("server", () => {
   nodemon({
     script: "index",
     watch: [
-      "src/node_modules/**/_server/**/*.js",
-      "src/node_modules/**/_shared/**/*.js"
+      "src/node_modules/**/*.js"
+    ],
+    ignore: [
+      "src/node_modules/app/web/client/**/*.js"
     ]
   })
 })
@@ -69,6 +69,6 @@ gulp.task("dev-server", () => {
     }
   })
   devServer.listen(config.webpack.port, () => {
-    console.log("Dev server running at port " + devServer.io.httpServer.address().port)
+    console.log("Server dev running at: http://" + config.webpack.host + ":" + config.webpack.port)
   })
 })

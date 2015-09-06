@@ -14,8 +14,8 @@
   },
   "homepage": "https://github.com/baodang/agridash#readme",
   "scripts": {
-    "lint": "gulp lint --color | bunyan -o short",
-    "dev": "gulp dev --color | bunyan -o short"
+    "lint": "gulp lint --color | bunyan -o short -L",
+    "dev": "gulp dev --color | bunyan -o short -L"
   },
   "dependencies": {
     "bunyan": "^1.4.0",

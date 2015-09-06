@@ -11,7 +11,7 @@ import WebpackDevServer from "webpack-dev-server"
 import {createLogger} from "bunyan"
 import beep from "beepbeep"
 
-const config = require(path.resolve("src/config"))
+const config = require(path.resolve("src/node_modules/app/config"))
 const webpackConfig = require(path.resolve("src/webpack"))
 
 const log = createLogger({name: "gulp"})
@@ -72,6 +72,8 @@ gulp.task("dev-server", () => {
     }
   })
   devServer.listen(config.webpack.port, () => {
-    log.info("Server dev running at: http://" + config.webpack.host + ":" + config.webpack.port)
+    log.info({
+      webpack: "http://" + config.webpack.host + ":" + config.webpack.port
+    })
   })
 })

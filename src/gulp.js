@@ -1,6 +1,5 @@
 import path from "path"
 import gulp from "gulp"
-import gutil from "gulp-util"
 import plumber from "gulp-plumber"
 import cache from "gulp-cached"
 import count from "gulp-count"
@@ -9,14 +8,18 @@ import forEach from "gulp-foreach"
 import nodemon from "gulp-nodemon"
 import webpack from "webpack"
 import WebpackDevServer from "webpack-dev-server"
+import {createLogger} from "bunyan"
+import beep from "beepbeep"
 
 const config = require(path.resolve("src/config"))
 const webpackConfig = require(path.resolve("src/webpack"))
 
+const log = createLogger({name: "gulp"})
+
 function handleError() {
   return plumber(function(error) {
-    gutil.beep()
-    gutil.log(error.toString())
+    log.error(error)
+    beep()
     this.emit("end")
   })
 }
@@ -69,6 +72,6 @@ gulp.task("dev-server", () => {
     }
   })
   devServer.listen(config.webpack.port, () => {
-    console.log("Server dev running at: http://" + config.webpack.host + ":" + config.webpack.port)
+    log.info("Server dev running at: http://" + config.webpack.host + ":" + config.webpack.port)
   })
 })

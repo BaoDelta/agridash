@@ -29,7 +29,7 @@ port       = 7999
 publicPath = "/public/dist/"
 
 [debug]
-showRoutes = true
+#showRoutes = true
 
 [vendors]
 styles  = [

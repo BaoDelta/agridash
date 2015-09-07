@@ -55,7 +55,6 @@
     "gulp-foreach": "^0.1.0",
     "gulp-nodemon": "^2.0.4",
     "gulp-plumber": "^1.0.1",
-    "gulp-util": "^3.0.6",
     "react-hot-loader": "^2.0.0-alpha",
     "style-loader": "^0.12.3",
     "webpack": "^1.11.0",

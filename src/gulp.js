@@ -72,7 +72,7 @@ gulp.task("dev-server", () => {
   })
   devServer.listen(config.webpack.port, () => {
     log.info({
-      webpack: "http://" + config.webpack.host + ":" + config.webpack.port
+      webpack: `http://${config.webpack.host}:${config.webpack.port}`
     })
   })
 })

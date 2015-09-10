@@ -31,7 +31,9 @@ publicPath = "/public/dist/"
 [debug]
 #showRoutes = true
 
-[vendors]
+[cdn]
+#cache  = "/cdn"
+url     = "https://cdnjs.cloudflare.com/ajax/libs"
 styles  = [
   "twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css",
   "font-awesome/4.4.0/css/font-awesome.min.css",

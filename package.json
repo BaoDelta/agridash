@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/baodang/agridash#readme",
   "scripts": {
+    "update": "npm update && npm shrinkwrap --dev",
     "lint": "gulp lint --color | bunyan -o short -L",
     "dev": "gulp dev --color | bunyan -o short -L"
   },

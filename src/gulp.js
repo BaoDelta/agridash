@@ -49,12 +49,11 @@ gulp.task("server", () => {
   nodemon({
     script: "index",
     watch: [
-      "src/node_modules/**/*"
+      "src/node_modules"
     ],
     ignore: [
-      "src/node_modules/app/web/client/**/*"
-    ],
-    ext: "js xml"
+      "src/node_modules/app/web/client"
+    ]
   })
 })
 

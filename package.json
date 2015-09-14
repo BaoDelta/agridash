@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/baodang/agridash#readme",
   "scripts": {
-    "update": "npm update && npm shrinkwrap --dev",
+    "lock": "npm shrinkwrap --dev",
     "lint": "gulp lint --color | bunyan -o short -L",
     "dev": "gulp dev --color | bunyan -o short -L"
   },
@@ -62,6 +62,6 @@
     "style-loader": "^0.12.3",
     "webpack": "^1.11.0",
     "webpack-dev-server": "^1.10.1",
-    "webpack-split-by-path": "0.0.3"
+    "webpack-split-by-path": "0.0.4"
   }
 }

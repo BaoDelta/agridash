@@ -14,6 +14,7 @@
     "space-before-function-paren": 0,
     "max-len": [2, 120],
     "react/wrap-multilines": 0,
+    "react/jsx-quotes": 0,
     "react/sort-comp": 2,
     "filenames/filenames": 0
   }

@@ -8389,8 +8389,8 @@
       }
     },
     "pg": {
-      "version": "4.4.1",
-      "resolved": "https://registry.npmjs.org/pg/-/pg-4.4.1.tgz",
+      "version": "4.4.2",
+      "resolved": "https://registry.npmjs.org/pg/-/pg-4.4.2.tgz",
       "dependencies": {
         "buffer-writer": {
           "version": "1.0.0",

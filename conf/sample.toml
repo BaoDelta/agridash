@@ -33,6 +33,7 @@ publicPath = "/public/dist/"
 
 [cdn]
 #cache  = "/cdn"
+[[cdn.libs]]
 url     = "https://cdnjs.cloudflare.com/ajax/libs"
 styles  = [
   "twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css",
@@ -45,4 +46,12 @@ scripts = [
   "leaflet/1.0.0-beta.1/leaflet.js",
   "highcharts/4.1.8/highcharts.js",
   "highcharts/4.1.8/modules/exporting.js"
+]
+[[cdn.libs]]
+url     = "https://api.mapbox.com/mapbox.js/plugins"
+styles  = [
+  "leaflet-fullscreen/v0.0.4/leaflet.fullscreen.css"
+]
+scripts = [
+  "leaflet-fullscreen/v0.0.4/Leaflet.fullscreen.min.js"
 ]

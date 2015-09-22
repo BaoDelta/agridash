@@ -8743,8 +8743,8 @@
       }
     },
     "redis": {
-      "version": "1.0.0",
-      "resolved": "https://registry.npmjs.org/redis/-/redis-1.0.0.tgz"
+      "version": "2.0.0",
+      "resolved": "https://registry.npmjs.org/redis/-/redis-2.0.0.tgz"
     },
     "redux": {
       "version": "3.0.0",

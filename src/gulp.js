@@ -52,9 +52,7 @@ gulp.task("server", () => {
       "src/node_modules"
     ],
     ignore: [
-      "src/node_modules/app/web/client.js",
-      "src/node_modules/app/web/views",
-      "src/node_modules/app/web/mock"
+      "src/node_modules/app/web"
     ]
   })
 })

@@ -35,7 +35,7 @@
     "pg": "^4.4.1",
     "react": "^0.14.0-beta3",
     "react-dom": "^0.14.0-beta3",
-    "react-redux": "^2.1.2",
+    "react-redux": "^3.0.0",
     "react-router": "^1.0.0-beta4",
     "redis": "^2.0.0",
     "redux": "^3.0.0",

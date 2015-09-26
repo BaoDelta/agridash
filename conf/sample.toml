@@ -47,11 +47,3 @@ scripts = [
   "highcharts/4.1.8/highcharts.js",
   "highcharts/4.1.8/modules/exporting.js"
 ]
-[[cdn.libs]]
-url     = "https://api.mapbox.com/mapbox.js/plugins"
-styles  = [
-  "leaflet-fullscreen/v0.0.4/leaflet.fullscreen.css"
-]
-scripts = [
-  "leaflet-fullscreen/v0.0.4/Leaflet.fullscreen.min.js"
-]

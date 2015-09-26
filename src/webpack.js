@@ -34,6 +34,15 @@ const webpackConfig = {
         test: /\.css$/,
         loader: "style!css?modules&localIdentName=[name]-[local]--[hash:base64:7]",
         include: path.resolve("src")
+      },
+      {
+        test: /\.css$/,
+        loader: "style!css",
+        include: path.resolve("node_modules")
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: "url-loader?limit=10000"
       }
     ]
   },

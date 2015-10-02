@@ -17,7 +17,8 @@
     "max-nested-callbacks": [2, 5],
     "max-statements": [2, 30],
     "react/wrap-multilines": 0,
-    "react/jsx-quotes": 0,
+    "react/jsx-closing-bracket-location": 0,
+    "react/jsx-indent-props": 0,
     "react/sort-comp": 2,
     "filenames/filenames": 0
   }

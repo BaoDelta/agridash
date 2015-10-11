@@ -6769,8 +6769,8 @@
       }
     },
     "history": {
-      "version": "1.12.4",
-      "resolved": "https://registry.npmjs.org/history/-/history-1.12.4.tgz",
+      "version": "1.12.5",
+      "resolved": "https://registry.npmjs.org/history/-/history-1.12.5.tgz",
       "dependencies": {
         "deep-equal": {
           "version": "1.0.1",

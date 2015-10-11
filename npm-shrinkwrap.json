@@ -8624,6 +8624,54 @@
       "version": "3.0.2",
       "resolved": "https://registry.npmjs.org/redux/-/redux-3.0.2.tgz"
     },
+    "redux-actions": {
+      "version": "0.8.0",
+      "resolved": "https://registry.npmjs.org/redux-actions/-/redux-actions-0.8.0.tgz",
+      "dependencies": {
+        "flux-standard-action": {
+          "version": "0.6.0",
+          "resolved": "https://registry.npmjs.org/flux-standard-action/-/flux-standard-action-0.6.0.tgz",
+          "dependencies": {
+            "lodash.isplainobject": {
+              "version": "3.2.0",
+              "resolved": "https://registry.npmjs.org/lodash.isplainobject/-/lodash.isplainobject-3.2.0.tgz",
+              "dependencies": {
+                "lodash._basefor": {
+                  "version": "3.0.2",
+                  "resolved": "https://registry.npmjs.org/lodash._basefor/-/lodash._basefor-3.0.2.tgz"
+                },
+                "lodash.isarguments": {
+                  "version": "3.0.4",
+                  "resolved": "https://registry.npmjs.org/lodash.isarguments/-/lodash.isarguments-3.0.4.tgz"
+                },
+                "lodash.keysin": {
+                  "version": "3.0.8",
+                  "resolved": "https://registry.npmjs.org/lodash.keysin/-/lodash.keysin-3.0.8.tgz",
+                  "dependencies": {
+                    "lodash.isarray": {
+                      "version": "3.0.4",
+                      "resolved": "https://registry.npmjs.org/lodash.isarray/-/lodash.isarray-3.0.4.tgz"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "reduce-reducers": {
+          "version": "0.1.1",
+          "resolved": "https://registry.npmjs.org/reduce-reducers/-/reduce-reducers-0.1.1.tgz"
+        }
+      }
+    },
+    "redux-logger": {
+      "version": "2.0.3",
+      "resolved": "https://registry.npmjs.org/redux-logger/-/redux-logger-2.0.3.tgz"
+    },
+    "redux-thunk": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/redux-thunk/-/redux-thunk-1.0.0.tgz"
+    },
     "sphericalmercator": {
       "version": "1.0.4",
       "resolved": "https://registry.npmjs.org/sphericalmercator/-/sphericalmercator-1.0.4.tgz"

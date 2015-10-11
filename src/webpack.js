@@ -24,16 +24,21 @@ const webpackConfig = {
     chunkFilename: "[name].js"
   },
   module: {
+    noParse: [
+      path.resolve("src/node_modules/app/web/vendors")
+    ],
     loaders: [
       {
         test: /\.js$/,
         loader: "react-hot!babel",
-        include: path.resolve("src")
+        include: path.resolve("src"),
+        exclude: path.resolve("src/node_modules/app/web/vendors")
       },
       {
         test: /\.css$/,
         loader: "style!css?modules&localIdentName=[name]-[local]--[hash:base64:7]",
-        include: path.resolve("src")
+        include: path.resolve("src"),
+        exclude: path.resolve("src/node_modules/app/web/vendors")
       },
       {
         test: /\.css$/,
@@ -41,8 +46,17 @@ const webpackConfig = {
         include: path.resolve("node_modules")
       },
       {
+        test: /\.css$/,
+        loader: "style!css",
+        include: path.resolve("src/node_modules/app/web/vendors")
+      },
+      {
         test: /\.(png|jpg)$/,
         loader: "url-loader?limit=10000"
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: "file-loader"
       }
     ]
   },
@@ -50,7 +64,10 @@ const webpackConfig = {
     new SplitByPathPlugin([
       {
         name: "vendors",
-        path: path.resolve("node_modules")
+        path: [
+          path.resolve("node_modules"),
+          path.resolve("src/node_modules/app/web/vendors")
+        ]
       }
     ]),
     new webpack.HotModuleReplacementPlugin(),

@@ -11,6 +11,7 @@
     "no-console": 0,
     "no-invalid-this": 0,
     "no-unused-expressions": 0,
+    "no-nested-ternary": 0,
     "space-before-function-paren": 0,
     "max-len": [2, 120],
     "max-params": [2, 4],

@@ -24,9 +24,10 @@ url    = "/tile"
 extent = "-19942765.3260505,-1637243.58853688,20012847.7359938,11528300.5677573"
 
 [webpack]
-host       = "localhost"
-port       = 7999
-publicPath = "/public/dist/"
+host          = "localhost"
+port          = 7999
+publicPath    = "/public/dist/"
+#ignoreStyles = true
 
 [debug]
 #showRoutes = true

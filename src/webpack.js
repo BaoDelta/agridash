@@ -3,7 +3,7 @@ import webpack from "webpack"
 import SplitByPathPlugin from "webpack-split-by-path"
 import config from "./node_modules/app/config"
 
-let app = [path.resolve("src/node_modules/app/client.js")]
+let app = [path.resolve("src/node_modules/app/web/client.js")]
 if (config.webpack.port) {
   app = [
     ...app,
@@ -12,43 +12,45 @@ if (config.webpack.port) {
   ]
 }
 
+const {publicPath, ignoreStyles} = config.webpack
+
 const webpackConfig = {
   devtool: "cheap-module-eval-source-map",
   entry: {
     app
   },
   output: {
-    path: path.resolve(config.webpack.publicPath),
-    publicPath: config.webpack.publicPath,
+    publicPath,
+    path: path.resolve(publicPath),
     filename: "[name].js",
     chunkFilename: "[name].js"
   },
   module: {
     noParse: [
-      path.resolve("src/node_modules/app/web/vendors")
+      path.resolve("src/node_modules/app/lib")
     ],
     loaders: [
       {
         test: /\.js$/,
         loader: "react-hot!babel",
         include: path.resolve("src"),
-        exclude: path.resolve("src/node_modules/app/web/vendors")
+        exclude: path.resolve("src/node_modules/app/lib")
       },
       {
         test: /\.css$/,
-        loader: "style!css?modules&localIdentName=[name]-[local]--[hash:base64:7]",
+        loader: ignoreStyles ? "raw" : "style!css?modules&localIdentName=[name]-[local]--[hash:base64:7]",
         include: path.resolve("src"),
-        exclude: path.resolve("src/node_modules/app/web/vendors")
+        exclude: path.resolve("src/node_modules/app/lib")
       },
       {
         test: /\.css$/,
-        loader: "style!css",
+        loader: ignoreStyles ? "raw" : "style!css",
+        include: path.resolve("src/node_modules/app/lib")
+      },
+      {
+        test: /\.css$/,
+        loader: ignoreStyles ? "raw" : "style!css",
         include: path.resolve("node_modules")
-      },
-      {
-        test: /\.css$/,
-        loader: "style!css",
-        include: path.resolve("src/node_modules/app/web/vendors")
       },
       {
         test: /\.(png|jpg)$/,
@@ -66,7 +68,7 @@ const webpackConfig = {
         name: "vendors",
         path: [
           path.resolve("node_modules"),
-          path.resolve("src/node_modules/app/web/vendors")
+          path.resolve("src/node_modules/app/lib")
         ]
       }
     ]),

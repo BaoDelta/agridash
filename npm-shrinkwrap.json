@@ -7070,10 +7070,6 @@
         }
       }
     },
-    "leaflet.fullscreen": {
-      "version": "1.3.0",
-      "resolved": "https://registry.npmjs.org/leaflet.fullscreen/-/leaflet.fullscreen-1.3.0.tgz"
-    },
     "lodash": {
       "version": "3.10.1",
       "resolved": "https://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz"
@@ -8399,6 +8395,10 @@
           "resolved": "https://registry.npmjs.org/semver/-/semver-4.3.6.tgz"
         }
       }
+    },
+    "raw-loader": {
+      "version": "0.5.1",
+      "resolved": "https://registry.npmjs.org/raw-loader/-/raw-loader-0.5.1.tgz"
     },
     "react": {
       "version": "0.14.0",

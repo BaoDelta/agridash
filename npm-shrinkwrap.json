@@ -7079,12 +7079,12 @@
       "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-2.7.0.tgz"
     },
     "mapnik": {
-      "version": "3.4.8",
-      "resolved": "https://registry.npmjs.org/mapnik/-/mapnik-3.4.8.tgz",
+      "version": "3.4.9",
+      "resolved": "https://registry.npmjs.org/mapnik/-/mapnik-3.4.9.tgz",
       "dependencies": {
         "mapnik-vector-tile": {
-          "version": "0.12.0",
-          "resolved": "https://registry.npmjs.org/mapnik-vector-tile/-/mapnik-vector-tile-0.12.0.tgz"
+          "version": "0.13.0",
+          "resolved": "https://registry.npmjs.org/mapnik-vector-tile/-/mapnik-vector-tile-0.13.0.tgz"
         },
         "nan": {
           "version": "2.0.9",

@@ -8319,8 +8319,8 @@
       }
     },
     "numbro": {
-      "version": "1.5.1",
-      "resolved": "https://registry.npmjs.org/numbro/-/numbro-1.5.1.tgz"
+      "version": "1.5.2",
+      "resolved": "https://registry.npmjs.org/numbro/-/numbro-1.5.2.tgz"
     },
     "pg": {
       "version": "4.4.2",
@@ -8617,8 +8617,8 @@
       }
     },
     "redis": {
-      "version": "2.2.1",
-      "resolved": "https://registry.npmjs.org/redis/-/redis-2.2.1.tgz",
+      "version": "2.2.3",
+      "resolved": "https://registry.npmjs.org/redis/-/redis-2.2.3.tgz",
       "dependencies": {
         "double-ended-queue": {
           "version": "2.1.0-0",

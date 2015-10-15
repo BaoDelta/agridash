@@ -8,6 +8,11 @@ password = DB_PASSWORD
 host     = "localhost"
 password = REDIS_PASSWORD
 
+[auth]
+cookiePassword = COOKIE_PASSWORD
+sessionTimeout = 24
+isSecure       = false
+
 [web]
 host  = "localhost"
 port  = 7000

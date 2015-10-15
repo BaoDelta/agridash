@@ -1,7 +1,7 @@
 {
   "name": "agridash",
   "version": "1.0.0",
-  "npm-shrinkwrap-version": "5.4.0",
+  "npm-shrinkwrap-version": "5.4.1",
   "node-version": "v0.12.7",
   "dependencies": {
     "babel": {
@@ -1017,6 +1017,10 @@
           "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-3.0.0.tgz"
         }
       }
+    },
+    "bcryptjs": {
+      "version": "2.3.0",
+      "resolved": "https://registry.npmjs.org/bcryptjs/-/bcryptjs-2.3.0.tgz"
     },
     "beepbeep": {
       "version": "1.2.0",
@@ -6768,6 +6772,38 @@
         }
       }
     },
+    "hapi-auth-cookie": {
+      "version": "3.1.0",
+      "resolved": "https://registry.npmjs.org/hapi-auth-cookie/-/hapi-auth-cookie-3.1.0.tgz",
+      "dependencies": {
+        "boom": {
+          "version": "2.9.0",
+          "resolved": "https://registry.npmjs.org/boom/-/boom-2.9.0.tgz"
+        },
+        "hoek": {
+          "version": "2.16.3",
+          "resolved": "https://registry.npmjs.org/hoek/-/hoek-2.16.3.tgz"
+        },
+        "joi": {
+          "version": "6.9.0",
+          "resolved": "https://registry.npmjs.org/joi/-/joi-6.9.0.tgz",
+          "dependencies": {
+            "isemail": {
+              "version": "1.2.0",
+              "resolved": "https://registry.npmjs.org/isemail/-/isemail-1.2.0.tgz"
+            },
+            "moment": {
+              "version": "2.10.6",
+              "resolved": "https://registry.npmjs.org/moment/-/moment-2.10.6.tgz"
+            },
+            "topo": {
+              "version": "1.1.0",
+              "resolved": "https://registry.npmjs.org/topo/-/topo-1.1.0.tgz"
+            }
+          }
+        }
+      }
+    },
     "history": {
       "version": "1.12.5",
       "resolved": "https://registry.npmjs.org/history/-/history-1.12.5.tgz",
@@ -7687,8 +7723,8 @@
       }
     },
     "npm-shrinkwrap": {
-      "version": "5.4.0",
-      "resolved": "https://registry.npmjs.org/npm-shrinkwrap/-/npm-shrinkwrap-5.4.0.tgz",
+      "version": "5.4.1",
+      "resolved": "https://registry.npmjs.org/npm-shrinkwrap/-/npm-shrinkwrap-5.4.1.tgz",
       "dependencies": {
         "array-find": {
           "version": "0.1.1",
@@ -7707,6 +7743,10 @@
               "resolved": "https://registry.npmjs.org/xtend/-/xtend-4.0.0.tgz"
             }
           }
+        },
+        "graceful-fs": {
+          "version": "4.1.2",
+          "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.2.tgz"
         },
         "json-diff": {
           "version": "0.3.1",
@@ -7749,24 +7789,24 @@
           "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz"
         },
         "msee": {
-          "version": "0.1.1",
-          "resolved": "https://registry.npmjs.org/msee/-/msee-0.1.1.tgz",
+          "version": "0.1.2",
+          "resolved": "https://registry.npmjs.org/msee/-/msee-0.1.2.tgz",
           "dependencies": {
             "cardinal": {
-              "version": "0.4.4",
-              "resolved": "https://registry.npmjs.org/cardinal/-/cardinal-0.4.4.tgz",
+              "version": "0.5.0",
+              "resolved": "https://registry.npmjs.org/cardinal/-/cardinal-0.5.0.tgz",
               "dependencies": {
                 "ansicolors": {
                   "version": "0.2.1",
                   "resolved": "https://registry.npmjs.org/ansicolors/-/ansicolors-0.2.1.tgz"
                 },
                 "redeyed": {
-                  "version": "0.4.4",
-                  "resolved": "https://registry.npmjs.org/redeyed/-/redeyed-0.4.4.tgz",
+                  "version": "0.5.0",
+                  "resolved": "https://registry.npmjs.org/redeyed/-/redeyed-0.5.0.tgz",
                   "dependencies": {
-                    "esprima": {
-                      "version": "1.0.4",
-                      "resolved": "https://registry.npmjs.org/esprima/-/esprima-1.0.4.tgz"
+                    "esprima-fb": {
+                      "version": "12001.1.0-dev-harmony-fb",
+                      "resolved": "https://registry.npmjs.org/esprima-fb/-/esprima-fb-12001.1.0-dev-harmony-fb.tgz"
                     }
                   }
                 }
@@ -8228,10 +8268,6 @@
             }
           }
         },
-        "read-json": {
-          "version": "0.1.0",
-          "resolved": "https://registry.npmjs.org/read-json/-/read-json-0.1.0.tgz"
-        },
         "rimraf": {
           "version": "2.4.3",
           "resolved": "https://registry.npmjs.org/rimraf/-/rimraf-2.4.3.tgz",
@@ -8671,8 +8707,8 @@
       }
     },
     "redux-logger": {
-      "version": "2.0.3",
-      "resolved": "https://registry.npmjs.org/redux-logger/-/redux-logger-2.0.3.tgz"
+      "version": "2.0.4",
+      "resolved": "https://registry.npmjs.org/redux-logger/-/redux-logger-2.0.4.tgz"
     },
     "redux-thunk": {
       "version": "1.0.0",

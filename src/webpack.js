@@ -25,6 +25,12 @@ const webpackConfig = {
     filename: "[name].js",
     chunkFilename: "[name].js"
   },
+  externals: {
+    leaflet: "L",
+    jquery: "jQuery",
+    alpaca: "Alpaca",
+    Highcharts: "Highcharts"
+  },
   module: {
     noParse: [
       path.resolve("src/node_modules/app/lib")

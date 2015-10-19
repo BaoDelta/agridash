@@ -76,7 +76,7 @@
     "npm-shrinkwrap": "^5.4.0",
     "raw-loader": "^0.5.1",
     "react-hot-loader": "^2.0.0-alpha",
-    "style-loader": "^0.12.3",
+    "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
     "webpack": "^1.11.0",
     "webpack-dev-server": "^1.10.1",

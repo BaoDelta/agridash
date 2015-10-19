@@ -11627,8 +11627,8 @@
       "resolved": "https://registry.npmjs.org/sphericalmercator/-/sphericalmercator-1.0.4.tgz"
     },
     "style-loader": {
-      "version": "0.12.4",
-      "resolved": "https://registry.npmjs.org/style-loader/-/style-loader-0.12.4.tgz",
+      "version": "0.13.0",
+      "resolved": "https://registry.npmjs.org/style-loader/-/style-loader-0.13.0.tgz",
       "dependencies": {
         "loader-utils": {
           "version": "0.2.11",

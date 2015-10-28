@@ -8,6 +8,11 @@ password = DB_PASSWORD
 host     = "localhost"
 password = REDIS_PASSWORD
 
+[auth]
+cookiePassword = COOKIE_PASSWORD
+sessionTimeout = 24
+isSecure       = false
+
 [web]
 host  = "localhost"
 port  = 7000
@@ -24,25 +29,30 @@ url    = "/tile"
 extent = "-19942765.3260505,-1637243.58853688,20012847.7359938,11528300.5677573"
 
 [webpack]
-host       = "localhost"
-port       = 7999
-publicPath = "/public/dist/"
+host          = "localhost"
+port          = 7999
+publicPath    = "/public/dist/"
+#ignoreStyles = true
 
 [debug]
 #showRoutes = true
 
 [cdn]
 #cache  = "/cdn"
+[[cdn.libs]]
+url     = "https://ajax.googleapis.com/ajax/libs"
+scripts = [
+  "jquery/1.11.3/jquery.min.js"
+]
+[[cdn.libs]]
 url     = "https://cdnjs.cloudflare.com/ajax/libs"
 styles  = [
-  "twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css",
   "font-awesome/4.4.0/css/font-awesome.min.css",
-  "leaflet/1.0.0-beta.1/leaflet.css"
+  "leaflet/0.7.5/leaflet.css"
 ]
 scripts = [
-  "jquery/3.0.0-alpha1/jquery.min.js",
-  "twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js",
-  "leaflet/1.0.0-beta.1/leaflet.js",
+  "twitter-bootstrap/3.3.5/js/bootstrap.min.js",
+  "leaflet/0.7.5/leaflet.js",
   "highcharts/4.1.8/highcharts.js",
   "highcharts/4.1.8/modules/exporting.js"
 ]

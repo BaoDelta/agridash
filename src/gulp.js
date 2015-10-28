@@ -26,7 +26,7 @@ gulp.task("dev", ["watch", "server", "dev-server"])
 
 gulp.task("lint", () => {
   const cacheName = "lint"
-  return gulp.src(["src/**/*.js"])
+  return gulp.src(["src/**/*.js", "!src/node_modules/app/lib/**/*.js"])
     .pipe(handleError())
     .pipe(cache(cacheName))
     .pipe(count("Linting ## files..."))
@@ -52,7 +52,8 @@ gulp.task("server", () => {
       "src/node_modules"
     ],
     ignore: [
-      "src/node_modules/app/web/client"
+      "src/node_modules/app/lib",
+      "src/node_modules/app/web"
     ]
   })
 })

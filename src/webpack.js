@@ -3,7 +3,7 @@ import webpack from "webpack"
 import SplitByPathPlugin from "webpack-split-by-path"
 import config from "./node_modules/app/config"
 
-let app = [path.resolve("src/node_modules/app/client.js")]
+let app = [path.resolve("src/node_modules/app/web/client.js")]
 if (config.webpack.port) {
   app = [
     ...app,
@@ -12,28 +12,59 @@ if (config.webpack.port) {
   ]
 }
 
+const {publicPath, ignoreStyles} = config.webpack
+
 const webpackConfig = {
   devtool: "cheap-module-eval-source-map",
   entry: {
     app
   },
   output: {
-    path: path.resolve(config.webpack.publicPath),
-    publicPath: config.webpack.publicPath,
+    publicPath,
+    path: path.resolve(publicPath),
     filename: "[name].js",
     chunkFilename: "[name].js"
   },
+  externals: {
+    leaflet: "L",
+    jquery: "jQuery",
+    alpaca: "Alpaca",
+    Highcharts: "Highcharts"
+  },
   module: {
+    noParse: [
+      path.resolve("src/node_modules/app/lib")
+    ],
     loaders: [
       {
         test: /\.js$/,
         loader: "react-hot!babel",
-        include: path.resolve("src")
+        include: path.resolve("src"),
+        exclude: path.resolve("src/node_modules/app/lib")
       },
       {
         test: /\.css$/,
-        loader: "style!css?modules&localIdentName=[name]-[local]--[hash:base64:7]",
-        include: path.resolve("src")
+        loader: ignoreStyles ? "raw" : "style!css?modules&localIdentName=[name]-[local]--[hash:base64:7]",
+        include: path.resolve("src"),
+        exclude: path.resolve("src/node_modules/app/lib")
+      },
+      {
+        test: /\.css$/,
+        loader: ignoreStyles ? "raw" : "style!css",
+        include: path.resolve("src/node_modules/app/lib")
+      },
+      {
+        test: /\.css$/,
+        loader: ignoreStyles ? "raw" : "style!css",
+        include: path.resolve("node_modules")
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: "url-loader?limit=10000"
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: "file-loader"
       }
     ]
   },
@@ -41,7 +72,10 @@ const webpackConfig = {
     new SplitByPathPlugin([
       {
         name: "vendors",
-        path: path.resolve("node_modules")
+        path: [
+          path.resolve("node_modules"),
+          path.resolve("src/node_modules/app/lib")
+        ]
       }
     ]),
     new webpack.HotModuleReplacementPlugin(),
